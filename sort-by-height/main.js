@@ -1,15 +1,12 @@
-/*
-Given an array, rearrange the array from least to greatest without removing or
-repositioning values that are -1
-input: array
-output: array
-- Start at the beginning of the array
-- Is it -1?
-  -yes, then do nothing and move to the next element in the array
-  -no, then d
-
-*/
-
 function solution(a) {
-
+  const sortedA = [...a].sort((a, b) => a - b).filter((num) => num !== -1);
+  let sortedAIndex = 0;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === -1) continue;
+    else {
+      a[i] = sortedA[sortedAIndex]; /* a[i] = sortedA[sortedAIndex++] postfix ++ returns value before incrementing */
+      sortedAIndex++;
+    }
+  }
+  return a;
 }
