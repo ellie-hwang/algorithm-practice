@@ -19,5 +19,4 @@ function solution(a, b) {
   if (diffCount <= 2) {
     return true;
   }
-  console.log(diffCount);
 }
