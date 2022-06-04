@@ -1,9 +1,6 @@
 function solution(n, firstNumber) {
-  var spots = n / 2;
-  if (firstNumber >= spots) {
-    return firstNumber - spots;
-  }
-  if (firstNumber < spots) {
-    return firstNumber + spots;
-  }
+  output = null;
+  if (firstNumber >= (n / 2)) {
+    return firstNumber - (n / 2);
+  } return firstNumber + (n / 2);
 }
